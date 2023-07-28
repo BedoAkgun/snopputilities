@@ -6,13 +6,13 @@
     "texture": "ehaste",
     "customModelName": "Normal",
     "name": "Enchanted Small Dexterity Potion",
-    "rarity": "UNCOMMON",
+    "rarity": "RARE",
     "creativeTab": {
       "value": "BREWING"
     },
     "stackSize": 1,
     "enchantability": 0,
-    "useDuration": 35,
+    "useDuration": 15,
     "toolType": 1.0,
     "damageCount": 10,
     "recipeRemainder": {
@@ -25,7 +25,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§9Haste 10 (0:10)"
+      "§9Haste VII (0:10)"
     ],
     "hasGlow": true,
     "guiBoundTo": "<NONE>",
@@ -34,14 +34,14 @@
     "onFinishUsingItem": {
       "name": "EHasteRightClick"
     },
-    "isFood": true,
-    "nutritionalValue": 0,
-    "saturation": 0.0,
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
     "eatResultItem": {
       "value": ""
     },
     "isMeat": false,
-    "isAlwaysEdible": true,
+    "isAlwaysEdible": false,
     "animation": "drink"
   }
 }

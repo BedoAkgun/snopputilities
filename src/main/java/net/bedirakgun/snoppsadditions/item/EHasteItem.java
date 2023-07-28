@@ -13,7 +13,6 @@ import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
-import net.minecraft.item.Food;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
@@ -43,8 +42,7 @@ public class EHasteItem extends SnoppsAdditionsModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.BREWING).maxDamage(10).rarity(Rarity.UNCOMMON)
-					.food((new Food.Builder()).hunger(0).saturation(0f).setAlwaysEdible().build()));
+			super(new Item.Properties().group(ItemGroup.BREWING).maxDamage(10).rarity(Rarity.RARE));
 			setRegistryName("e_haste");
 		}
 
@@ -54,18 +52,13 @@ public class EHasteItem extends SnoppsAdditionsModElements.ModElement {
 		}
 
 		@Override
-		public net.minecraft.util.SoundEvent getEatSound() {
-			return net.minecraft.util.SoundEvents.ENTITY_GENERIC_DRINK;
-		}
-
-		@Override
 		public int getItemEnchantability() {
 			return 0;
 		}
 
 		@Override
 		public int getUseDuration(ItemStack itemstack) {
-			return 35;
+			return 15;
 		}
 
 		@Override
@@ -82,7 +75,7 @@ public class EHasteItem extends SnoppsAdditionsModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u00A79Haste 10 (0:10)"));
+			list.add(new StringTextComponent("\u00A79Haste VII (0:10)"));
 		}
 
 		@Override

@@ -8,15 +8,12 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.Hand;
-import net.minecraft.util.ActionResult;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
-import net.minecraft.item.Food;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
@@ -45,8 +42,7 @@ public class EHasteXLItem extends SnoppsAdditionsModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.BREWING).maxDamage(70).rarity(Rarity.UNCOMMON)
-					.food((new Food.Builder()).hunger(0).saturation(0f).setAlwaysEdible().build()));
+			super(new Item.Properties().group(ItemGroup.BREWING).maxDamage(70).rarity(Rarity.RARE));
 			setRegistryName("e_haste_xl");
 		}
 
@@ -56,18 +52,13 @@ public class EHasteXLItem extends SnoppsAdditionsModElements.ModElement {
 		}
 
 		@Override
-		public net.minecraft.util.SoundEvent getEatSound() {
-			return net.minecraft.util.SoundEvents.ENTITY_GENERIC_DRINK;
-		}
-
-		@Override
 		public int getItemEnchantability() {
 			return 0;
 		}
 
 		@Override
 		public int getUseDuration(ItemStack itemstack) {
-			return 15;
+			return 25;
 		}
 
 		@Override
@@ -84,13 +75,12 @@ public class EHasteXLItem extends SnoppsAdditionsModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u00A79Haste 10 (0:10)"));
+			list.add(new StringTextComponent("\u00A79Haste VIII (0:10)"));
 		}
 
 		@Override
-		public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
-			ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
-			ItemStack itemstack = ar.getResult();
+		public ItemStack onItemUseFinish(ItemStack itemstack, World world, LivingEntity entity) {
+			ItemStack retval = super.onItemUseFinish(itemstack, world, entity);
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
@@ -98,7 +88,7 @@ public class EHasteXLItem extends SnoppsAdditionsModElements.ModElement {
 			EHasteRightClickProcedure.executeProcedure(
 					Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
 							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-			return ar;
+			return retval;
 		}
 	}
 }
