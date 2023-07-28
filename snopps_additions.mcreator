@@ -6,7 +6,8 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "haste"
+      "registry_name": "haste",
+      "path": "~/Dexterity"
     },
     {
       "name": "HasteRightclicked",
@@ -26,7 +27,8 @@
             "type": "itemstack"
           }
         ]
-      }
+      },
+      "path": "~/Dexterity"
     },
     {
       "name": "HasteMid",
@@ -34,7 +36,8 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "haste_mid"
+      "registry_name": "haste_mid",
+      "path": "~/Dexterity"
     },
     {
       "name": "HasteLarge",
@@ -42,7 +45,8 @@
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "haste_large"
+      "registry_name": "haste_large",
+      "path": "~/Dexterity"
     },
     {
       "name": "HasteXL",
@@ -50,7 +54,8 @@
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "haste_xl"
+      "registry_name": "haste_xl",
+      "path": "~/Dexterity"
     },
     {
       "name": "EHaste",
@@ -58,7 +63,8 @@
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "e_haste"
+      "registry_name": "e_haste",
+      "path": "~/Dexterity"
     },
     {
       "name": "EHasteRightClick",
@@ -78,7 +84,8 @@
             "type": "itemstack"
           }
         ]
-      }
+      },
+      "path": "~/Dexterity"
     },
     {
       "name": "EHasteMid",
@@ -86,7 +93,8 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "e_haste_mid"
+      "registry_name": "e_haste_mid",
+      "path": "~/Dexterity"
     },
     {
       "name": "EHasteLarge",
@@ -94,7 +102,8 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "e_haste_large"
+      "registry_name": "e_haste_large",
+      "path": "~/Dexterity"
     },
     {
       "name": "EHasteXL",
@@ -102,7 +111,8 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "e_haste_xl"
+      "registry_name": "e_haste_xl",
+      "path": "~/Dexterity"
     }
   ],
   "variable_elements": [],
@@ -129,7 +139,12 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Dexterity",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "snopps_additions",
