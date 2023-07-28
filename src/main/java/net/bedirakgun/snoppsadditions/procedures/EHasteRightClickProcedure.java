@@ -28,7 +28,7 @@ public class EHasteRightClickProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HASTE, (int) 200, (int) 9));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HASTE, (int) 200, (int) 8));
 		{
 			ItemStack _ist = itemstack;
 			if (_ist.attemptDamageItem((int) 1, new Random(), null)) {
