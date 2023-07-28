@@ -12,7 +12,7 @@
     },
     "stackSize": 1,
     "enchantability": 0,
-    "useDuration": 15,
+    "useDuration": 35,
     "toolType": 1.0,
     "damageCount": 10,
     "recipeRemainder": {
@@ -31,17 +31,17 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 1,
-    "onRightClickedInAir": {
+    "onFinishUsingItem": {
       "name": "EHasteRightClick"
     },
-    "isFood": false,
-    "nutritionalValue": 4,
-    "saturation": 0.3,
+    "isFood": true,
+    "nutritionalValue": 0,
+    "saturation": 0.0,
     "eatResultItem": {
       "value": ""
     },
     "isMeat": false,
-    "isAlwaysEdible": false,
+    "isAlwaysEdible": true,
     "animation": "drink"
   }
 }
