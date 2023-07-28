@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="snopps_additions"
+version="0.1"
+displayName="snopp's additions"
+credits="Bedirhan Akgün"
+displayURL="https://mcreator.net"
+authors="Bedirhan Akgün"
+description='''
+fuck gabriel he didnt pay me a single broken penny for this mod
+'''
+
+[[dependencies.snopps_additions]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

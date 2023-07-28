@@ -1,0 +1,47 @@
+{
+  "_fv": 34,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "ehaste_xl",
+    "customModelName": "Normal",
+    "name": "Enchanted Extra Large Dexterity Potion",
+    "rarity": "UNCOMMON",
+    "creativeTab": {
+      "value": "BREWING"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 15,
+    "toolType": 1.0,
+    "damageCount": 70,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "§9Haste 10 (0:10)"
+    ],
+    "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 1,
+    "onRightClickedInAir": {
+      "name": "EHasteRightClick"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "drink"
+  }
+}

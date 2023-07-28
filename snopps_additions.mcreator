@@ -1,0 +1,154 @@
+{
+  "mod_elements": [
+    {
+      "name": "Haste",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "haste"
+    },
+    {
+      "name": "HasteRightclicked",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "haste_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HasteMid",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "haste_mid"
+    },
+    {
+      "name": "HasteLarge",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "haste_large"
+    },
+    {
+      "name": "HasteXL",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "haste_xl"
+    },
+    {
+      "name": "EHaste",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_haste"
+    },
+    {
+      "name": "EHasteRightClick",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_haste_right_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EHasteMid",
+      "type": "item",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_haste_mid"
+    },
+    {
+      "name": "EHasteLarge",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_haste_large"
+    },
+    {
+      "name": "EHasteXL",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_haste_xl"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.ambatakahm_utilites.haste_xl": "Extra Large Dexterity Potion",
+      "item.snopps_additions.haste_large": "Large Dexterity Potion",
+      "item.snopps_additions.e_haste": "Enchanted Small Dexterity Potion",
+      "item.ambatakahm_utilites.haste_mid": "Medium Dexterity Potion",
+      "item.snopps_additions.e_haste_xl": "Enchanted Extra Large Dexterity Potion",
+      "item.ambatakahm_utilites.haste_large": "Large Dexterity Potion",
+      "item.snopps_additions.e_haste_mid": "Enchanted Mid Dexterity Potion",
+      "item.snopps_additions.e_haste_large": "Enchanted Large Dexterity Potion",
+      "item.snopps_additions.haste_mid": "Medium Dexterity Potion",
+      "item.snopp_potions.haste": "Small Dexterity Potion",
+      "item.snopp_potions.haste_mid": "Medium Dexterity Potion",
+      "item.snopp_potions.haste_xl": "Extra Large Dexterity Potion",
+      "item.snopps_additions.haste": "Small Dexterity Potion",
+      "item.ambatakahm_utilites.haste": "Small Dexterity Potion",
+      "item.snopp_potions.haste_large": "Large Dexterity Potion",
+      "item.snopps_additions.haste_xl": "Extra Large Dexterity Potion"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "snopps_additions",
+    "modName": "snopp\u0027s additions",
+    "version": "0.1",
+    "description": "fuck gabriel he didnt pay me a single broken penny for this mod",
+    "author": "Bedirhan Akgün",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Bedirhan Akgün",
+    "modElementsPackage": "net.bedirakgun.snoppsadditions",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200348217
+}
