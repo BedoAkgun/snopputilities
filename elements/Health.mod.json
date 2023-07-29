@@ -1,0 +1,47 @@
+{
+  "_fv": 34,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "health",
+    "customModelName": "Normal",
+    "name": "Small Health Potion",
+    "rarity": "UNCOMMON",
+    "creativeTab": {
+      "value": "BREWING"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 37,
+    "toolType": 1.0,
+    "damageCount": 5,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "§9Haste V (0:08)"
+    ],
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 1,
+    "onRightClickedInAir": {
+      "name": "HasteRightclicked"
+    },
+    "isFood": false,
+    "nutritionalValue": 0,
+    "saturation": 0.0,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": true,
+    "animation": "drink"
+  }
+}

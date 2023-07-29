@@ -113,6 +113,36 @@
       "locked_code": false,
       "registry_name": "e_haste_xl",
       "path": "~/Dexterity"
+    },
+    {
+      "name": "HealthRightClicked",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Health"
+    },
+    {
+      "name": "Health",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health",
+      "path": "~/Health"
     }
   ],
   "variable_elements": [],
@@ -124,6 +154,7 @@
       "item.snopps_additions.e_haste": "Enchanted Small Dexterity Potion",
       "item.ambatakahm_utilites.haste_mid": "Medium Dexterity Potion",
       "item.snopps_additions.e_haste_xl": "Enchanted Extra Large Dexterity Potion",
+      "item.snopps_additions.health": "Small Health Potion",
       "item.ambatakahm_utilites.haste_large": "Large Dexterity Potion",
       "item.snopps_additions.e_haste_mid": "Enchanted Mid Dexterity Potion",
       "item.snopps_additions.e_haste_large": "Enchanted Large Dexterity Potion",
@@ -142,6 +173,10 @@
     "children": [
       {
         "name": "Dexterity",
+        "children": []
+      },
+      {
+        "name": "Health",
         "children": []
       }
     ]
