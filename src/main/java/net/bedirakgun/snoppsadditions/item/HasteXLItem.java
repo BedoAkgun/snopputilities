@@ -11,6 +11,7 @@ import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
+import net.minecraft.item.Food;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
@@ -40,13 +41,19 @@ public class HasteXLItem extends SnoppsAdditionsModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.BREWING).maxDamage(50).rarity(Rarity.UNCOMMON));
+			super(new Item.Properties().group(ItemGroup.BREWING).maxDamage(50).rarity(Rarity.UNCOMMON)
+					.food((new Food.Builder()).hunger(0).saturation(0f).setAlwaysEdible().build()));
 			setRegistryName("haste_xl");
 		}
 
 		@Override
 		public UseAction getUseAction(ItemStack itemstack) {
 			return UseAction.DRINK;
+		}
+
+		@Override
+		public net.minecraft.util.SoundEvent getEatSound() {
+			return net.minecraft.util.SoundEvents.ENTITY_GENERIC_DRINK;
 		}
 
 		@Override
