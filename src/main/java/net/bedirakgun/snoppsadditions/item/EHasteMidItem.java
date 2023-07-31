@@ -13,13 +13,13 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
 import net.bedirakgun.snoppsadditions.procedures.EHasteRightClickProcedure;
+import net.bedirakgun.snoppsadditions.itemgroup.SnoopsPotionsItemGroup;
 import net.bedirakgun.snoppsadditions.SnoppsAdditionsModElements;
 
 import java.util.stream.Stream;
@@ -44,7 +44,7 @@ public class EHasteMidItem extends SnoppsAdditionsModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.BREWING).maxDamage(20).rarity(Rarity.RARE));
+			super(new Item.Properties().group(SnoopsPotionsItemGroup.tab).maxDamage(20).rarity(Rarity.RARE));
 			setRegistryName("e_haste_mid");
 		}
 

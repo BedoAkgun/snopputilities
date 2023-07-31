@@ -8,7 +8,7 @@
     "name": "Enchanted Large Dexterity Potion",
     "rarity": "RARE",
     "creativeTab": {
-      "value": "BREWING"
+      "value": "CUSTOM:SnoopsPotions"
     },
     "stackSize": 1,
     "enchantability": 0,

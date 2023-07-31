@@ -227,6 +227,128 @@
       "locked_code": false,
       "registry_name": "e_health_xl",
       "path": "~/Health"
+    },
+    {
+      "name": "Swiftness",
+      "type": "item",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swiftness",
+      "path": "~/Swiftness"
+    },
+    {
+      "name": "SwiftnessRightClicked",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swiftness_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Swiftness"
+    },
+    {
+      "name": "SnoopsPotions",
+      "type": "tab",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snoops_potions"
+    },
+    {
+      "name": "SwiftnessMid",
+      "type": "item",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swiftness_mid",
+      "path": "~/Swiftness"
+    },
+    {
+      "name": "SwiftnessLarge",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swiftness_large",
+      "path": "~/Swiftness"
+    },
+    {
+      "name": "SwiftnessXL",
+      "type": "item",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swiftness_xl",
+      "path": "~/Swiftness"
+    },
+    {
+      "name": "ESwiftnessRightClicked",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_swiftness_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Swiftness"
+    },
+    {
+      "name": "ESwiftness",
+      "type": "item",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_swiftness",
+      "path": "~/Swiftness"
+    },
+    {
+      "name": "ESwiftnessMid",
+      "type": "item",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_swiftness_mid",
+      "path": "~/Swiftness"
+    },
+    {
+      "name": "ESwiftnessLarge",
+      "type": "item",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_swiftness_large",
+      "path": "~/Swiftness"
+    },
+    {
+      "name": "ESwiftnessXL",
+      "type": "item",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_swiftness_xl",
+      "path": "~/Swiftness"
     }
   ],
   "variable_elements": [],
@@ -235,22 +357,31 @@
     "en_us": {
       "item.snopps_additions.e_health": "Enchanted Small Health Potion",
       "item.snopps_additions.e_health_mid": "Enchanted Medium Health Potion",
+      "item.snopps_additions.swiftness_large": "Large Swiftness Potion",
       "item.ambatakahm_utilites.haste_mid": "Medium Dexterity Potion",
       "item.snopps_additions.health_large": "Large Health Potion",
+      "item.snopps_additions.e_swiftness_large": "Enchanted Large Swiftness Potion",
       "item.ambatakahm_utilites.haste_large": "Large Dexterity Potion",
       "item.snopps_additions.haste_mid": "Medium Dexterity Potion",
-      "item.snopp_potions.haste_mid": "Medium Dexterity Potion",
+      "item.snopps_additions.e_swiftness_xl": "Enchanted Large Swiftness Potion",
       "item.snopp_potions.haste": "Small Dexterity Potion",
+      "item.snopp_potions.haste_mid": "Medium Dexterity Potion",
       "item.snopps_additions.e_health_large": "Enchanted Large Health Potion",
+      "item.snopps_additions.swiftness_mid": "Medium Swiftness Potion",
       "item.ambatakahm_utilites.haste": "Small Dexterity Potion",
+      "item.snopps_additions.swiftness_xl": "Extra Large Swiftness Potion",
       "item.snopps_additions.haste_xl": "Extra Large Dexterity Potion",
+      "itemGroup.tabsnoops_potions": "Snoop\u0027s Battle Potions",
+      "item.snopps_additions.e_swiftness": "Enchanted Small Swiftness Potion",
       "item.ambatakahm_utilites.haste_xl": "Extra Large Dexterity Potion",
       "item.snopps_additions.health_mid": "Medium Health Potion",
+      "item.snopps_additions.swiftness": "Small Swiftness Potion",
       "item.snopps_additions.haste_large": "Large Dexterity Potion",
       "item.snopps_additions.e_haste": "Enchanted Small Dexterity Potion",
       "item.snopps_additions.e_health_xl": "Enchanted Extra Large Health Potion",
       "item.snopps_additions.e_haste_xl": "Enchanted Extra Large Dexterity Potion",
       "item.snopps_additions.health": "Small Health Potion",
+      "item.snopps_additions.e_swiftness_mid": "Enchanted Medium Swiftness Potion",
       "item.snopps_additions.e_haste_mid": "Enchanted Mid Dexterity Potion",
       "item.snopps_additions.e_haste_large": "Enchanted Large Dexterity Potion",
       "item.snopp_potions.haste_xl": "Extra Large Dexterity Potion",
@@ -268,6 +399,10 @@
       },
       {
         "name": "Health",
+        "children": []
+      },
+      {
+        "name": "Swiftness",
         "children": []
       }
     ]

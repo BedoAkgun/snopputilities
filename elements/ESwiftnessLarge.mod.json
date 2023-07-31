@@ -1,0 +1,48 @@
+{
+  "_fv": 34,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "eswiftness_large",
+    "customModelName": "Normal",
+    "name": "Enchanted Large Swiftness Potion",
+    "rarity": "RARE",
+    "creativeTab": {
+      "value": "CUSTOM:SnoopsPotions"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 37,
+    "toolType": 1.0,
+    "damageCount": 22,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "§9Speed V (0:50)",
+      "§855s Cooldown"
+    ],
+    "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 1,
+    "onRightClickedInAir": {
+      "name": "ESwiftnessRightClicked"
+    },
+    "isFood": false,
+    "nutritionalValue": 0,
+    "saturation": 0.0,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": true,
+    "animation": "drink"
+  }
+}
