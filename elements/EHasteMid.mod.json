@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "ehaste_mid",
     "customModelName": "Normal",
-    "name": "Enchanted Mid Dexterity Potion",
+    "name": "Enchanted Medium Dexterity Potion",
     "rarity": "RARE",
     "creativeTab": {
       "value": "CUSTOM:SnoopsPotions"

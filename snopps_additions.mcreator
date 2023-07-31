@@ -349,6 +349,128 @@
       "locked_code": false,
       "registry_name": "e_swiftness_xl",
       "path": "~/Swiftness"
+    },
+    {
+      "name": "Power",
+      "type": "item",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power",
+      "path": "~/Power"
+    },
+    {
+      "name": "PowerRightClicked",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Power"
+    },
+    {
+      "name": "PowerMid",
+      "type": "item",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_mid",
+      "path": "~/Power"
+    },
+    {
+      "name": "PowerLarge",
+      "type": "item",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_large",
+      "path": "~/Power"
+    },
+    {
+      "name": "PowerXL",
+      "type": "item",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_xl",
+      "path": "~/Power"
+    },
+    {
+      "name": "EPowerRightClicked",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_power_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Power"
+    },
+    {
+      "name": "EPower",
+      "type": "item",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_power",
+      "path": "~/Power"
+    },
+    {
+      "name": "EPowerMid",
+      "type": "item",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_power_mid",
+      "path": "~/Power"
+    },
+    {
+      "name": "EPowerLarge",
+      "type": "item",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_power_large",
+      "path": "~/Power"
+    },
+    {
+      "name": "EPowerXL",
+      "type": "item",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_power_xl",
+      "path": "~/Power"
+    },
+    {
+      "name": "WoodenHealingStaff",
+      "type": "rangeditem",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_healing_staff"
     }
   ],
   "variable_elements": [],
@@ -356,14 +478,16 @@
   "language_map": {
     "en_us": {
       "item.snopps_additions.e_health": "Enchanted Small Health Potion",
+      "item.snopps_additions.power_xl": "Extra Large Power Potion",
       "item.snopps_additions.e_health_mid": "Enchanted Medium Health Potion",
       "item.snopps_additions.swiftness_large": "Large Swiftness Potion",
+      "item.snopps_additions.e_power_mid": "Enchanted Medium Power Potion",
       "item.ambatakahm_utilites.haste_mid": "Medium Dexterity Potion",
       "item.snopps_additions.health_large": "Large Health Potion",
       "item.snopps_additions.e_swiftness_large": "Enchanted Large Swiftness Potion",
       "item.ambatakahm_utilites.haste_large": "Large Dexterity Potion",
       "item.snopps_additions.haste_mid": "Medium Dexterity Potion",
-      "item.snopps_additions.e_swiftness_xl": "Enchanted Large Swiftness Potion",
+      "item.snopps_additions.e_swiftness_xl": "Enchanted Extra Large Swiftness Potion",
       "item.snopp_potions.haste": "Small Dexterity Potion",
       "item.snopp_potions.haste_mid": "Medium Dexterity Potion",
       "item.snopps_additions.e_health_large": "Enchanted Large Health Potion",
@@ -371,23 +495,30 @@
       "item.ambatakahm_utilites.haste": "Small Dexterity Potion",
       "item.snopps_additions.swiftness_xl": "Extra Large Swiftness Potion",
       "item.snopps_additions.haste_xl": "Extra Large Dexterity Potion",
-      "itemGroup.tabsnoops_potions": "Snoop\u0027s Battle Potions",
+      "itemGroup.tabsnoops_potions": "Snopp\u0027s Battle Potions",
       "item.snopps_additions.e_swiftness": "Enchanted Small Swiftness Potion",
+      "item.snopps_additions.e_power": "Enchanted Small Power Potion",
+      "item.snopps_additions.wooden_healing_staff": "Wooden Healing Staff",
+      "item.snopps_additions.power": "Small Power Potion",
+      "item.snopps_additions.power_large": "Large Power Potion",
       "item.ambatakahm_utilites.haste_xl": "Extra Large Dexterity Potion",
       "item.snopps_additions.health_mid": "Medium Health Potion",
       "item.snopps_additions.swiftness": "Small Swiftness Potion",
+      "item.snopps_additions.e_power_large": "Enchanted Large Power Potion",
       "item.snopps_additions.haste_large": "Large Dexterity Potion",
       "item.snopps_additions.e_haste": "Enchanted Small Dexterity Potion",
       "item.snopps_additions.e_health_xl": "Enchanted Extra Large Health Potion",
       "item.snopps_additions.e_haste_xl": "Enchanted Extra Large Dexterity Potion",
+      "item.snopps_additions.e_power_xl": "Enchanted Extra Large Power Potion",
       "item.snopps_additions.health": "Small Health Potion",
       "item.snopps_additions.e_swiftness_mid": "Enchanted Medium Swiftness Potion",
-      "item.snopps_additions.e_haste_mid": "Enchanted Mid Dexterity Potion",
+      "item.snopps_additions.e_haste_mid": "Enchanted Medium Dexterity Potion",
       "item.snopps_additions.e_haste_large": "Enchanted Large Dexterity Potion",
       "item.snopp_potions.haste_xl": "Extra Large Dexterity Potion",
       "item.snopps_additions.haste": "Small Dexterity Potion",
       "item.snopps_additions.health_xl": "Extra Large Health Potion",
-      "item.snopp_potions.haste_large": "Large Dexterity Potion"
+      "item.snopp_potions.haste_large": "Large Dexterity Potion",
+      "item.snopps_additions.power_mid": "Medium Power Potion"
     }
   },
   "foldersRoot": {
@@ -403,6 +534,14 @@
       },
       {
         "name": "Swiftness",
+        "children": []
+      },
+      {
+        "name": "Power",
+        "children": []
+      },
+      {
+        "name": "Staffs",
         "children": []
       }
     ]

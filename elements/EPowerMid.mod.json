@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "eswiftness_xl",
+    "texture": "epower_mid",
     "customModelName": "Normal",
-    "name": "Enchanted Extra Large Swiftness Potion",
+    "name": "Enchanted Medium Power Potion",
     "rarity": "RARE",
     "creativeTab": {
       "value": "CUSTOM:SnoopsPotions"
@@ -14,7 +14,7 @@
     "enchantability": 0,
     "useDuration": 37,
     "toolType": 1.0,
-    "damageCount": 40,
+    "damageCount": 14,
     "recipeRemainder": {
       "value": ""
     },
@@ -25,15 +25,15 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§9Speed V (0:50)",
-      "§855s Cooldown"
+      "§9Strength II (0:15)",
+      "§850s Cooldown"
     ],
     "hasGlow": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 1,
     "onRightClickedInAir": {
-      "name": "ESwiftnessRightClicked"
+      "name": "EPowerRightClicked"
     },
     "isFood": false,
     "nutritionalValue": 0,
