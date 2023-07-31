@@ -15,7 +15,7 @@
       "value": ""
     },
     "shootConstantly": false,
-    "usageCount": 100,
+    "usageCount": 80,
     "actionSound": {
       "value": "block.note.chime"
     },
@@ -23,15 +23,24 @@
     "animation": "bow",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
+    "onRangedItemUsed": {
+      "name": "WoodenStaffCooldown"
+    },
     "bulletPower": 0.3,
-    "bulletDamage": 1.0,
-    "bulletKnockback": 5,
+    "bulletDamage": 0.0,
+    "bulletKnockback": 0,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
       "value": "Items.FIREWORK_CHARGE"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": ""
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "SpawnHealArea"
+    },
+    "onBulletHitsEntity": {
+      "name": "WoodenHealingStaffDirectHealing"
+    }
   }
 }

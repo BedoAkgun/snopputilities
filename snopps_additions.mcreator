@@ -470,7 +470,104 @@
       "sortid": 42,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "wooden_healing_staff"
+      "registry_name": "wooden_healing_staff",
+      "path": "~/Staffs"
+    },
+    {
+      "name": "SpawnHealArea",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_heal_area",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Staffs"
+    },
+    {
+      "name": "WoodenHealingStaffDirectHealing",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_healing_staff_direct_healing",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Staffs"
+    },
+    {
+      "name": "WoodenStaffCooldown",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_staff_cooldown",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Staffs"
+    },
+    {
+      "name": "SpawnWoodenStaffHealArea",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_wooden_staff_heal_area",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Staffs"
     }
   ],
   "variable_elements": [],

@@ -11,6 +11,8 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.EntityRayTraceResult;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Hand;
@@ -31,10 +33,17 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
+import net.bedirakgun.snoppsadditions.procedures.WoodenStaffCooldownProcedure;
+import net.bedirakgun.snoppsadditions.procedures.WoodenHealingStaffDirectHealingProcedure;
+import net.bedirakgun.snoppsadditions.procedures.SpawnHealAreaProcedure;
 import net.bedirakgun.snoppsadditions.entity.renderer.WoodenHealingStaffRenderer;
 import net.bedirakgun.snoppsadditions.SnoppsAdditionsModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @SnoppsAdditionsModElements.ModElement.Tag
 public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElement {
@@ -57,7 +66,7 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(100));
+			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(80));
 			setRegistryName("wooden_healing_staff");
 		}
 
@@ -85,9 +94,13 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 				if (true) {
-					ArrowCustomEntity entityarrow = shoot(world, entity, random, 0.3f, 1, 5);
+					ArrowCustomEntity entityarrow = shoot(world, entity, random, 0.3f, 0, 0);
 					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 					entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.DISALLOWED;
+
+					WoodenStaffCooldownProcedure.executeProcedure(
+							Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				}
 			}
 		}
@@ -134,6 +147,37 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 		}
 
 		@Override
+		public void onEntityHit(EntityRayTraceResult entityRayTraceResult) {
+			super.onEntityHit(entityRayTraceResult);
+			Entity entity = entityRayTraceResult.getEntity();
+			Entity sourceentity = this.func_234616_v_();
+			Entity immediatesourceentity = this;
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			World world = this.world;
+
+			WoodenHealingStaffDirectHealingProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+
+		@Override
+		public void func_230299_a_(BlockRayTraceResult blockRayTraceResult) {
+			super.func_230299_a_(blockRayTraceResult);
+			double x = blockRayTraceResult.getPos().getX();
+			double y = blockRayTraceResult.getPos().getY();
+			double z = blockRayTraceResult.getPos().getZ();
+			World world = this.world;
+			Entity entity = this.func_234616_v_();
+			Entity immediatesourceentity = this;
+
+			SpawnHealAreaProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+
+		@Override
 		public void tick() {
 			super.tick();
 			double x = this.getPosX();
@@ -171,8 +215,8 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 		double d3 = target.getPosZ() - entity.getPosZ();
 		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 0.3f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(1);
-		entityarrow.setKnockbackStrength(5);
+		entityarrow.setDamage(0);
+		entityarrow.setKnockbackStrength(0);
 		entityarrow.setIsCritical(false);
 		entity.world.addEntity(entityarrow);
 		double x = entity.getPosX();
