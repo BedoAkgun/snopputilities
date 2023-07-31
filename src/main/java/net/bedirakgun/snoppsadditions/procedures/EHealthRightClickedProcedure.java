@@ -17,17 +17,17 @@ import net.bedirakgun.snoppsadditions.SnoppsAdditionsMod;
 import java.util.Random;
 import java.util.Map;
 
-public class HealthRightClickedProcedure {
+public class EHealthRightClickedProcedure {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency entity for procedure HealthRightClicked!");
+				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency entity for procedure EHealthRightClicked!");
 			return;
 		}
 		if (dependencies.get("itemstack") == null) {
 			if (!dependencies.containsKey("itemstack"))
-				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency itemstack for procedure HealthRightClicked!");
+				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency itemstack for procedure EHealthRightClicked!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -36,13 +36,13 @@ public class HealthRightClickedProcedure {
 				? ((LivingEntity) entity).getMaxHealth()
 				: -1)) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).setHealth((float) (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) + 5));
+				((LivingEntity) entity).setHealth((float) (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) + 8));
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 125, (int) 1));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 84, (int) 2));
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 30, (int) 3));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) 3));
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.MINING_FATIGUE, (int) 30, (int) 3));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.MINING_FATIGUE, (int) 20, (int) 3));
 			if ((new Object() {
 				public boolean checkGamemode(Entity _ent) {
 					if (_ent instanceof ServerPlayerEntity) {
@@ -63,7 +63,7 @@ public class HealthRightClickedProcedure {
 					}
 				}
 				if (entity instanceof PlayerEntity)
-					((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 150);
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 100);
 			} else {
 				if (entity instanceof PlayerEntity)
 					((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 20);

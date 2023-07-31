@@ -14,7 +14,7 @@
     "enchantability": 0,
     "useDuration": 37,
     "toolType": 1.0,
-    "damageCount": 5,
+    "damageCount": 8,
     "recipeRemainder": {
       "value": ""
     },
@@ -25,14 +25,15 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§9Haste V (0:08)"
+      "§9Regenarates 5 hearts",
+      "§87.5s Cooldown"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 1,
     "onRightClickedInAir": {
-      "name": "HasteRightclicked"
+      "name": "HealthRightClicked"
     },
     "isFood": false,
     "nutritionalValue": 0,

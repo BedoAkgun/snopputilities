@@ -78,6 +78,7 @@ public class EHasteItem extends SnoppsAdditionsModElements.ModElement {
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("\u00A79Haste XX (0:10)"));
+			list.add(new StringTextComponent("\u00A7830s Cooldown"));
 		}
 
 		@Override

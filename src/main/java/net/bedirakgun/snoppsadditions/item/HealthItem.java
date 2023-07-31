@@ -17,7 +17,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
-import net.bedirakgun.snoppsadditions.procedures.HasteRightclickedProcedure;
+import net.bedirakgun.snoppsadditions.procedures.HealthRightClickedProcedure;
 import net.bedirakgun.snoppsadditions.SnoppsAdditionsModElements;
 
 import java.util.stream.Stream;
@@ -42,7 +42,7 @@ public class HealthItem extends SnoppsAdditionsModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.BREWING).maxDamage(5).rarity(Rarity.UNCOMMON));
+			super(new Item.Properties().group(ItemGroup.BREWING).maxDamage(8).rarity(Rarity.UNCOMMON));
 			setRegistryName("health");
 		}
 
@@ -69,7 +69,8 @@ public class HealthItem extends SnoppsAdditionsModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u00A79Haste V (0:08)"));
+			list.add(new StringTextComponent("\u00A79Regenarates 5 hearts"));
+			list.add(new StringTextComponent("\u00A787.5s Cooldown"));
 		}
 
 		@Override
@@ -80,7 +81,7 @@ public class HealthItem extends SnoppsAdditionsModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			HasteRightclickedProcedure.executeProcedure(
+			HealthRightClickedProcedure.executeProcedure(
 					Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
 							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return ar;

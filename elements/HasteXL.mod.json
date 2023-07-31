@@ -25,7 +25,8 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§9Haste V (0:08)"
+      "§9Haste V (0:08)",
+      "§845s Cooldown"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

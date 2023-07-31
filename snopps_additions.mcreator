@@ -143,29 +143,120 @@
       "locked_code": false,
       "registry_name": "health",
       "path": "~/Health"
+    },
+    {
+      "name": "HealthMid",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_mid",
+      "path": "~/Health"
+    },
+    {
+      "name": "HealthLarge",
+      "type": "item",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_large",
+      "path": "~/Health"
+    },
+    {
+      "name": "HealthXL",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_xl",
+      "path": "~/Health"
+    },
+    {
+      "name": "EHealthRightClicked",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_health_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Health"
+    },
+    {
+      "name": "EHealth",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_health",
+      "path": "~/Health"
+    },
+    {
+      "name": "EHealthMid",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_health_mid",
+      "path": "~/Health"
+    },
+    {
+      "name": "EHealthLarge",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_health_large",
+      "path": "~/Health"
+    },
+    {
+      "name": "EHealthXL",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_health_xl",
+      "path": "~/Health"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.snopps_additions.e_health": "Enchanted Small Health Potion",
+      "item.snopps_additions.e_health_mid": "Enchanted Medium Health Potion",
+      "item.ambatakahm_utilites.haste_mid": "Medium Dexterity Potion",
+      "item.snopps_additions.health_large": "Large Health Potion",
+      "item.ambatakahm_utilites.haste_large": "Large Dexterity Potion",
+      "item.snopps_additions.haste_mid": "Medium Dexterity Potion",
+      "item.snopp_potions.haste_mid": "Medium Dexterity Potion",
+      "item.snopp_potions.haste": "Small Dexterity Potion",
+      "item.snopps_additions.e_health_large": "Enchanted Large Health Potion",
+      "item.ambatakahm_utilites.haste": "Small Dexterity Potion",
+      "item.snopps_additions.haste_xl": "Extra Large Dexterity Potion",
       "item.ambatakahm_utilites.haste_xl": "Extra Large Dexterity Potion",
+      "item.snopps_additions.health_mid": "Medium Health Potion",
       "item.snopps_additions.haste_large": "Large Dexterity Potion",
       "item.snopps_additions.e_haste": "Enchanted Small Dexterity Potion",
-      "item.ambatakahm_utilites.haste_mid": "Medium Dexterity Potion",
+      "item.snopps_additions.e_health_xl": "Enchanted Extra Large Health Potion",
       "item.snopps_additions.e_haste_xl": "Enchanted Extra Large Dexterity Potion",
       "item.snopps_additions.health": "Small Health Potion",
-      "item.ambatakahm_utilites.haste_large": "Large Dexterity Potion",
       "item.snopps_additions.e_haste_mid": "Enchanted Mid Dexterity Potion",
       "item.snopps_additions.e_haste_large": "Enchanted Large Dexterity Potion",
-      "item.snopps_additions.haste_mid": "Medium Dexterity Potion",
-      "item.snopp_potions.haste": "Small Dexterity Potion",
-      "item.snopp_potions.haste_mid": "Medium Dexterity Potion",
       "item.snopp_potions.haste_xl": "Extra Large Dexterity Potion",
       "item.snopps_additions.haste": "Small Dexterity Potion",
-      "item.ambatakahm_utilites.haste": "Small Dexterity Potion",
-      "item.snopp_potions.haste_large": "Large Dexterity Potion",
-      "item.snopps_additions.haste_xl": "Extra Large Dexterity Potion"
+      "item.snopps_additions.health_xl": "Extra Large Health Potion",
+      "item.snopp_potions.haste_large": "Large Dexterity Potion"
     }
   },
   "foldersRoot": {

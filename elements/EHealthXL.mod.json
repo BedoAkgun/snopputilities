@@ -3,10 +3,10 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "haste",
+    "texture": "ehealth_xl",
     "customModelName": "Normal",
-    "name": "Small Dexterity Potion",
-    "rarity": "UNCOMMON",
+    "name": "Enchanted Extra Large Health Potion",
+    "rarity": "RARE",
     "creativeTab": {
       "value": "BREWING"
     },
@@ -14,7 +14,7 @@
     "enchantability": 0,
     "useDuration": 37,
     "toolType": 1.0,
-    "damageCount": 5,
+    "damageCount": 150,
     "recipeRemainder": {
       "value": ""
     },
@@ -25,15 +25,15 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§9Haste V (0:08)",
-      "§845s Cooldown"
+      "§9Regenarates 7.5 hearts",
+      "§85s Cooldown"
     ],
-    "hasGlow": false,
+    "hasGlow": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 1,
     "onRightClickedInAir": {
-      "name": "HasteRightclicked"
+      "name": "EHealthRightClicked"
     },
     "isFood": false,
     "nutritionalValue": 0,
