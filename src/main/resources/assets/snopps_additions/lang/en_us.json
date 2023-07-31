@@ -6,6 +6,7 @@
   "item.snopps_additions.e_power_mid": "Enchanted Medium Power Potion",
   "item.ambatakahm_utilites.haste_mid": "Medium Dexterity Potion",
   "item.snopps_additions.health_large": "Large Health Potion",
+  "item.snopps_additions.stone_healing_staff": "Stone Healing Staff",
   "item.snopps_additions.e_swiftness_large": "Enchanted Large Swiftness Potion",
   "item.ambatakahm_utilites.haste_large": "Large Dexterity Potion",
   "item.snopps_additions.haste_mid": "Medium Dexterity Potion",
@@ -40,5 +41,6 @@
   "item.snopps_additions.haste": "Small Dexterity Potion",
   "item.snopps_additions.health_xl": "Extra Large Health Potion",
   "item.snopp_potions.haste_large": "Large Dexterity Potion",
-  "item.snopps_additions.power_mid": "Medium Power Potion"
+  "item.snopps_additions.power_mid": "Medium Power Potion",
+  "item.snopps_additions.iron_healing_staff": "Iron Healing Staff"
 }

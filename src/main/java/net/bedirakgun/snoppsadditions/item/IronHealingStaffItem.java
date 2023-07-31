@@ -36,10 +36,10 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 
-import net.bedirakgun.snoppsadditions.procedures.WoodenStaffCooldownProcedure;
-import net.bedirakgun.snoppsadditions.procedures.WoodenHealingStaffDirectHealingProcedure;
-import net.bedirakgun.snoppsadditions.procedures.SpawnWoodenStaffHealAreaProcedure;
-import net.bedirakgun.snoppsadditions.entity.renderer.WoodenHealingStaffRenderer;
+import net.bedirakgun.snoppsadditions.procedures.SpawnIronStaffHealAreaProcedure;
+import net.bedirakgun.snoppsadditions.procedures.IronStaffCooldownProcedure;
+import net.bedirakgun.snoppsadditions.procedures.IronHealingStaffDirectHealingProcedure;
+import net.bedirakgun.snoppsadditions.entity.renderer.IronHealingStaffRenderer;
 import net.bedirakgun.snoppsadditions.SnoppsAdditionsModElements;
 
 import java.util.stream.Stream;
@@ -50,16 +50,16 @@ import java.util.HashMap;
 import java.util.AbstractMap;
 
 @SnoppsAdditionsModElements.ModElement.Tag
-public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElement {
-	@ObjectHolder("snopps_additions:wooden_healing_staff")
+public class IronHealingStaffItem extends SnoppsAdditionsModElements.ModElement {
+	@ObjectHolder("snopps_additions:iron_healing_staff")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("projectile_wooden_healing_staff").setRegistryName("projectile_wooden_healing_staff");
+			.size(0.5f, 0.5f)).build("projectile_iron_healing_staff").setRegistryName("projectile_iron_healing_staff");
 
-	public WoodenHealingStaffItem(SnoppsAdditionsModElements instance) {
-		super(instance, 42);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new WoodenHealingStaffRenderer.ModelRegisterHandler());
+	public IronHealingStaffItem(SnoppsAdditionsModElements instance) {
+		super(instance, 51);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new IronHealingStaffRenderer.ModelRegisterHandler());
 	}
 
 	@Override
@@ -70,8 +70,8 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(80));
-			setRegistryName("wooden_healing_staff");
+			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(320));
+			setRegistryName("iron_healing_staff");
 		}
 
 		@Override
@@ -83,9 +83,9 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("On direct hit: 2.5 Hearts heal"));
-			list.add(new StringTextComponent("On ground impact: Regeneration II effect in a 2 block radius for 2.5 seconds"));
-			list.add(new StringTextComponent("\u00A78 5.5 second cooldown"));
+			list.add(new StringTextComponent("On direct hit: 4 Hearts heal"));
+			list.add(new StringTextComponent("On ground impact: Regeneration III effect in a 3 block radius for 3.5 seconds"));
+			list.add(new StringTextComponent("\u00A787 second cooldown"));
 		}
 
 		@Override
@@ -106,11 +106,11 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 				if (true) {
-					ArrowCustomEntity entityarrow = shoot(world, entity, random, 0.3f, 0, 0);
+					ArrowCustomEntity entityarrow = shoot(world, entity, random, 0.4f, 0, 0);
 					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 					entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.DISALLOWED;
 
-					WoodenStaffCooldownProcedure.executeProcedure(
+					IronStaffCooldownProcedure.executeProcedure(
 							Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
 									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				}
@@ -169,7 +169,7 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 			double z = this.getPosZ();
 			World world = this.world;
 
-			WoodenHealingStaffDirectHealingProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+			IronHealingStaffDirectHealingProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
@@ -183,7 +183,7 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 			Entity entity = this.func_234616_v_();
 			Entity immediatesourceentity = this;
 
-			SpawnWoodenStaffHealAreaProcedure.executeProcedure(Stream
+			SpawnIronStaffHealAreaProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
@@ -225,7 +225,7 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 		double d0 = target.getPosY() + (double) target.getEyeHeight() - 1.1;
 		double d1 = target.getPosX() - entity.getPosX();
 		double d3 = target.getPosZ() - entity.getPosZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 0.3f * 2, 12.0F);
+		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 0.4f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setDamage(0);
 		entityarrow.setKnockbackStrength(0);

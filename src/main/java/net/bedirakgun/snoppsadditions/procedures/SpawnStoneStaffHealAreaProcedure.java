@@ -13,27 +13,27 @@ import net.bedirakgun.snoppsadditions.SnoppsAdditionsMod;
 
 import java.util.Map;
 
-public class SpawnWoodenStaffHealAreaProcedure {
+public class SpawnStoneStaffHealAreaProcedure {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency world for procedure SpawnWoodenStaffHealArea!");
+				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency world for procedure SpawnStoneStaffHealArea!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency x for procedure SpawnWoodenStaffHealArea!");
+				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency x for procedure SpawnStoneStaffHealArea!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency y for procedure SpawnWoodenStaffHealArea!");
+				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency y for procedure SpawnStoneStaffHealArea!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency z for procedure SpawnWoodenStaffHealArea!");
+				SnoppsAdditionsMod.LOGGER.warn("Failed to load dependency z for procedure SpawnStoneStaffHealArea!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
@@ -44,7 +44,7 @@ public class SpawnWoodenStaffHealAreaProcedure {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-					"/summon area_effect_cloud ~ ~1 ~ {Radius:2f,Duration:50,ReapplicationDelay:30,Effects:[{Duration:50,Id:10b,Amplifier:1b}]}");
+					"/summon area_effect_cloud ~ ~1 ~ {Radius:2.5f,Duration:60,ReapplicationDelay:30,Effects:[{Duration:50,Id:10b,Amplifier:2b}]}");
 		}
 	}
 }

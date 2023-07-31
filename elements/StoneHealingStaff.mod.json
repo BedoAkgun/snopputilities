@@ -3,13 +3,13 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "woodenhealingstaff",
+    "texture": "stonehealingstaff",
     "customModelName": "Normal",
-    "name": "Wooden Healing Staff",
+    "name": "Stone Healing Staff",
     "specialInfo": [
-      "On direct hit: 2.5 Hearts heal",
-      "On ground impact: Regeneration II effect in a 2 block radius for 2.5 seconds",
-      "§8 5.5 second cooldown"
+      "On direct hit: 3 Hearts heal",
+      "On ground impact: Regeneration III effect in a 2.5 block radius for 3 seconds",
+      "§85.5 second cooldown"
     ],
     "creativeTab": {
       "value": "COMBAT"
@@ -19,7 +19,7 @@
       "value": ""
     },
     "shootConstantly": false,
-    "usageCount": 80,
+    "usageCount": 180,
     "actionSound": {
       "value": "block.note.chime"
     },
@@ -28,7 +28,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "onRangedItemUsed": {
-      "name": "WoodenStaffCooldown"
+      "name": "StoneStaffCooldown"
     },
     "bulletPower": 0.3,
     "bulletDamage": 0.0,
@@ -41,10 +41,10 @@
     "bulletModel": "Default",
     "customBulletModelTexture": "",
     "onBulletHitsBlock": {
-      "name": "SpawnWoodenStaffHealArea"
+      "name": "SpawnStoneStaffHealArea"
     },
     "onBulletHitsEntity": {
-      "name": "WoodenHealingStaffDirectHealing"
+      "name": "StoneHealingStaffDirectHealing"
     }
   }
 }

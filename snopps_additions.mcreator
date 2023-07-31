@@ -471,36 +471,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "wooden_healing_staff",
-      "path": "~/Staffs"
-    },
-    {
-      "name": "SpawnHealArea",
-      "type": "procedure",
-      "sortid": 43,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spawn_heal_area",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Staffs"
+      "path": "~/Staffs/Wooden"
     },
     {
       "name": "WoodenHealingStaffDirectHealing",
@@ -517,7 +488,7 @@
           }
         ]
       },
-      "path": "~/Staffs"
+      "path": "~/Staffs/Wooden"
     },
     {
       "name": "WoodenStaffCooldown",
@@ -538,7 +509,7 @@
           }
         ]
       },
-      "path": "~/Staffs"
+      "path": "~/Staffs/Wooden"
     },
     {
       "name": "SpawnWoodenStaffHealArea",
@@ -567,7 +538,159 @@
           }
         ]
       },
-      "path": "~/Staffs"
+      "path": "~/Staffs/Wooden"
+    },
+    {
+      "name": "StoneHealingStaff",
+      "type": "rangeditem",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_healing_staff",
+      "path": "~/Staffs/Stone"
+    },
+    {
+      "name": "StoneHealingStaffDirectHealing",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_healing_staff_direct_healing",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Staffs/Stone"
+    },
+    {
+      "name": "StoneStaffCooldown",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_staff_cooldown",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Staffs/Stone"
+    },
+    {
+      "name": "SpawnStoneStaffHealArea",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_stone_staff_heal_area",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Staffs/Stone"
+    },
+    {
+      "name": "IronHealingStaff",
+      "type": "rangeditem",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_healing_staff",
+      "path": "~/Staffs/Iron"
+    },
+    {
+      "name": "IronHealingStaffDirectHealing",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_healing_staff_direct_healing",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Staffs/Iron"
+    },
+    {
+      "name": "IronStaffCooldown",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_staff_cooldown",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Staffs/Iron"
+    },
+    {
+      "name": "SpawnIronStaffHealArea",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_iron_staff_heal_area",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Staffs/Iron"
     }
   ],
   "variable_elements": [],
@@ -581,6 +704,7 @@
       "item.snopps_additions.e_power_mid": "Enchanted Medium Power Potion",
       "item.ambatakahm_utilites.haste_mid": "Medium Dexterity Potion",
       "item.snopps_additions.health_large": "Large Health Potion",
+      "item.snopps_additions.stone_healing_staff": "Stone Healing Staff",
       "item.snopps_additions.e_swiftness_large": "Enchanted Large Swiftness Potion",
       "item.ambatakahm_utilites.haste_large": "Large Dexterity Potion",
       "item.snopps_additions.haste_mid": "Medium Dexterity Potion",
@@ -615,7 +739,8 @@
       "item.snopps_additions.haste": "Small Dexterity Potion",
       "item.snopps_additions.health_xl": "Extra Large Health Potion",
       "item.snopp_potions.haste_large": "Large Dexterity Potion",
-      "item.snopps_additions.power_mid": "Medium Power Potion"
+      "item.snopps_additions.power_mid": "Medium Power Potion",
+      "item.snopps_additions.iron_healing_staff": "Iron Healing Staff"
     }
   },
   "foldersRoot": {
@@ -639,7 +764,20 @@
       },
       {
         "name": "Staffs",
-        "children": []
+        "children": [
+          {
+            "name": "Wooden",
+            "children": []
+          },
+          {
+            "name": "Stone",
+            "children": []
+          },
+          {
+            "name": "Iron",
+            "children": []
+          }
+        ]
       }
     ]
   },

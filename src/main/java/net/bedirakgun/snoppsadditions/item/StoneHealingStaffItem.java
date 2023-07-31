@@ -36,10 +36,10 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 
-import net.bedirakgun.snoppsadditions.procedures.WoodenStaffCooldownProcedure;
-import net.bedirakgun.snoppsadditions.procedures.WoodenHealingStaffDirectHealingProcedure;
-import net.bedirakgun.snoppsadditions.procedures.SpawnWoodenStaffHealAreaProcedure;
-import net.bedirakgun.snoppsadditions.entity.renderer.WoodenHealingStaffRenderer;
+import net.bedirakgun.snoppsadditions.procedures.StoneStaffCooldownProcedure;
+import net.bedirakgun.snoppsadditions.procedures.StoneHealingStaffDirectHealingProcedure;
+import net.bedirakgun.snoppsadditions.procedures.SpawnStoneStaffHealAreaProcedure;
+import net.bedirakgun.snoppsadditions.entity.renderer.StoneHealingStaffRenderer;
 import net.bedirakgun.snoppsadditions.SnoppsAdditionsModElements;
 
 import java.util.stream.Stream;
@@ -50,16 +50,16 @@ import java.util.HashMap;
 import java.util.AbstractMap;
 
 @SnoppsAdditionsModElements.ModElement.Tag
-public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElement {
-	@ObjectHolder("snopps_additions:wooden_healing_staff")
+public class StoneHealingStaffItem extends SnoppsAdditionsModElements.ModElement {
+	@ObjectHolder("snopps_additions:stone_healing_staff")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("projectile_wooden_healing_staff").setRegistryName("projectile_wooden_healing_staff");
+			.size(0.5f, 0.5f)).build("projectile_stone_healing_staff").setRegistryName("projectile_stone_healing_staff");
 
-	public WoodenHealingStaffItem(SnoppsAdditionsModElements instance) {
-		super(instance, 42);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new WoodenHealingStaffRenderer.ModelRegisterHandler());
+	public StoneHealingStaffItem(SnoppsAdditionsModElements instance) {
+		super(instance, 47);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new StoneHealingStaffRenderer.ModelRegisterHandler());
 	}
 
 	@Override
@@ -70,8 +70,8 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(80));
-			setRegistryName("wooden_healing_staff");
+			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(180));
+			setRegistryName("stone_healing_staff");
 		}
 
 		@Override
@@ -83,9 +83,9 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("On direct hit: 2.5 Hearts heal"));
-			list.add(new StringTextComponent("On ground impact: Regeneration II effect in a 2 block radius for 2.5 seconds"));
-			list.add(new StringTextComponent("\u00A78 5.5 second cooldown"));
+			list.add(new StringTextComponent("On direct hit: 3 Hearts heal"));
+			list.add(new StringTextComponent("On ground impact: Regeneration III effect in a 2.5 block radius for 3 seconds"));
+			list.add(new StringTextComponent("\u00A785.5 second cooldown"));
 		}
 
 		@Override
@@ -110,7 +110,7 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 					entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.DISALLOWED;
 
-					WoodenStaffCooldownProcedure.executeProcedure(
+					StoneStaffCooldownProcedure.executeProcedure(
 							Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
 									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				}
@@ -169,7 +169,7 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 			double z = this.getPosZ();
 			World world = this.world;
 
-			WoodenHealingStaffDirectHealingProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+			StoneHealingStaffDirectHealingProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
@@ -183,7 +183,7 @@ public class WoodenHealingStaffItem extends SnoppsAdditionsModElements.ModElemen
 			Entity entity = this.func_234616_v_();
 			Entity immediatesourceentity = this;
 
-			SpawnWoodenStaffHealAreaProcedure.executeProcedure(Stream
+			SpawnStoneStaffHealAreaProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
